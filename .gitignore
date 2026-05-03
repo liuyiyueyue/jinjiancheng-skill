@@ -1,0 +1,18 @@
+# 抓取结果（但保留知识库）
+*.csv
+
+# 知识库文件需要提交，不要忽略
+!jinjiancheng_knowledge_base.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# 配置文件（包含 API Key）
+config.json
+.env
