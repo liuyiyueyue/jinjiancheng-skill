@@ -4,9 +4,15 @@
 使用 AWS Bedrock 调用 Claude 模型
 """
 
+import argparse
 import json
 import sys
 import os
+
+from jinjiancheng_grounding import (
+    KNOWLEDGE_BASE, build_context, build_prompt, load_answer_policy,
+    load_knowledge_base, parse_date, search_relevant_articles, supporting_sources,
+)
 
 # 检查boto3
 try:
@@ -24,11 +30,9 @@ except ImportError:
     print("  pip3 install jieba")
     sys.exit(1)
 
-KNOWLEDGE_BASE = "jinjiancheng_knowledge_base.json"
-
 # Bedrock 配置
 BEDROCK_REGION = os.environ.get('AWS_REGION', 'us-east-1')  # 默认 us-east-1
-BEDROCK_MODEL_ID = 'anthropic.claude-3-5-sonnet-20241022-v2:0'  # Claude 3.5 Sonnet
+BEDROCK_MODEL_ID = os.environ.get('BEDROCK_MODEL_ID', 'anthropic.claude-3-5-sonnet-20241022-v2:0')
 
 
 def check_aws_credentials():
@@ -55,55 +59,6 @@ def check_aws_credentials():
         return False
 
 
-def load_knowledge_base():
-    """加载知识库"""
-    with open(KNOWLEDGE_BASE, 'r', encoding='utf-8') as f:
-        return json.load(f)
-
-
-def search_relevant_articles(question, kb, limit=5):
-    """搜索相关文章"""
-    # 分词
-    keywords = [w for w in jieba.cut(question) if len(w) > 1]
-
-    results = []
-    for article in kb:
-        score = 0
-        for keyword in keywords:
-            score += article['content'].lower().count(keyword.lower()) * 2
-            if keyword in article['title']:
-                score += 10
-
-        if score > 0:
-            results.append({
-                'article': article,
-                'score': score
-            })
-
-    results.sort(key=lambda x: x['score'], reverse=True)
-    return results[:limit]
-
-
-def build_context(articles):
-    """构建上下文"""
-    context_parts = []
-
-    for i, result in enumerate(articles, 1):
-        article = result['article']
-        # 截取文章内容（避免太长）
-        content = article['content'][:1500] + "..." if len(article['content']) > 1500 else article['content']
-
-        context_parts.append(f"""
-【文章{i}】{article['title']} ({article['folder_name'][:10]})
-
-{content}
-
----
-""")
-
-    return "\n".join(context_parts)
-
-
 def call_bedrock_claude(prompt, region=BEDROCK_REGION, model_id=BEDROCK_MODEL_ID):
     """调用 Bedrock Claude API"""
 
@@ -118,7 +73,8 @@ def call_bedrock_claude(prompt, region=BEDROCK_REGION, model_id=BEDROCK_MODEL_ID
         request_body = {
             "anthropic_version": "bedrock-2023-05-31",
             "max_tokens": 2000,
-            "temperature": 0.7,
+            "temperature": 0.3,
+            "system": load_answer_policy(),
             "messages": [
                 {
                     "role": "user",
@@ -148,122 +104,44 @@ def call_bedrock_claude(prompt, region=BEDROCK_REGION, model_id=BEDROCK_MODEL_ID
         return f"❌ 错误: {e}"
 
 
-def ask_jinjiancheng(question):
-    """扮演金渐成回答问题"""
+def ask_jinjiancheng(question, as_of=None):
+    """依据原文、时点和适用条件分析问题。"""
 
     print("🔍 正在搜索知识库...")
     kb = load_knowledge_base()
 
     print("📚 分析相关文章...")
-    articles = search_relevant_articles(question, kb, limit=3)
+    articles = search_relevant_articles(question, kb, limit=3, as_of=as_of)
 
-    if not articles:
-        return """
-我翻了翻我写过的文章，好像没怎么写过这个话题。
-
-要么你换个问法，要么这个问题不在我的知识范围内。
-我主要写房地产、港股美股、投资理念这些，
-如果你问的是别的领域，我确实帮不上忙。
-
-或者，你可以直接去看看我的文章，说不定能找到答案。
-"""
+    if not articles and not supporting_sources(question, kb, as_of):
+        return '在指定资料范围内没有找到足够依据，无法据此归因给金渐成。可以提供文章或换一个更具体的问题。'
 
     print(f"✅ 找到 {len(articles)} 篇相关文章")
     print(f"🤖 正在调用 Bedrock Claude (region: {BEDROCK_REGION})...")
 
-    # 构建上下文
-    context = build_context(articles)
-
-    # 构建prompt
-    prompt = f"""你现在是金渐成，一位投资者和公众号作者。
-
-你的性格特征：
-- 直言不讳，说话直接
-- 敢于质疑主流观点
-- 强调风险控制和现金流
-- 反对追涨杀跌行为
-- 鼓励独立思考
-
-你的说话风格：
-- 有时用"~"结尾表示轻松语气
-- 对韭菜行为毫不客气："这帮人又跑来问..."
-- 常说："结合自己的情况"
-- 常说："做自己的女娲"（独立思考）
-- 用"停停停"来打断错误认知
-
-用户问题：{question}
-
-你之前写过的相关文章：
-{context}
-
-请用金渐成的语气和风格回答这个问题：
-1. 如果用户的想法有问题，直接指出来
-2. 基于你文章里的观点和案例
-3. 给出具体的、可操作的建议
-4. 强调风险控制
-5. 保持你一贯的直接和犀利
-
-不要只是复述文章内容，要像你平时在公众号里回答读者那样。"""
+    # 完整原文与核对摘录作为资料传入，行为要求放在 system 中。
+    prompt = build_prompt(question, articles, kb, as_of)
 
     # 调用 Bedrock
     response = call_bedrock_claude(prompt)
 
-    # 添加引用文章
-    citations = "\n\n---\n💡 以上回答基于金渐成的历史文章\n📚 参考文章：\n"
-    for i, result in enumerate(articles, 1):
-        article = result['article']
-        citations += f"  {i}. 《{article['title']}》({article['folder_name'][:10]})\n"
+    # 引用由回答按实际支持的主张给出。
+    return response
 
-    citations += f"\n⚠️  投资有风险，决策需独立思考\n"
-    citations += f"🔧 使用 AWS Bedrock (region: {BEDROCK_REGION})"
-
-    return response + citations
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("="*60)
-        print(" "*12 + "💬 金渐成AI投资顾问 (Bedrock版)")
-        print("="*60)
-        print("\n🎭 真正扮演金渐成，用他的语气回答投资问题")
-        print("📚 基于375篇文章，77万字内容")
-        print("☁️  使用 AWS Bedrock 调用 Claude")
-        print("\n用法:")
-        print("  python3 jinjiancheng_bedrock.py '你的问题'")
-        print("\n示例:")
-        print('  python3 jinjiancheng_bedrock.py "我有100万，想买房，你怎么看？"')
-        print('  python3 jinjiancheng_bedrock.py "腾讯现在还能买吗？"')
-        print("\n🔧 AWS 配置:")
-        print("  1. 确保已配置 AWS 凭证 (aws configure)")
-        print("  2. 确保有 Bedrock 访问权限")
-        print("  3. 可选：设置 AWS_REGION 环境变量")
-        print(f"     当前 region: {BEDROCK_REGION}")
-        print(f"     当前模型: {BEDROCK_MODEL_ID}")
-        print("\n💰 费用:")
-        print("  Claude 3.5 Sonnet (Bedrock):")
-        print("  - 输入: $3/1M tokens")
-        print("  - 输出: $15/1M tokens")
-        print("  - 约 ¥0.15/次")
-        print("\n" + "="*60)
-        sys.exit(1)
-
-    # 检查 AWS 凭证
+    parser = argparse.ArgumentParser(description='依据金渐成历史文章，解释观点、条件与变化')
+    parser.add_argument('question', nargs='+', help='需要分析的问题')
+    parser.add_argument('--as-of', type=parse_date, help='只使用不晚于此日期发表的文章')
+    args = parser.parse_args()
     if not check_aws_credentials():
         sys.exit(1)
-
-    question = " ".join(sys.argv[1:])
-
-    print("\n" + "="*60)
-    print(" "*12 + "💬 金渐成AI投资顾问 (Bedrock版)")
-    print("="*60)
-    print(f"\n❓ 你的问题: {question}\n")
-    print("="*60 + "\n")
-
-    answer = ask_jinjiancheng(question)
-
-    print("🗣️  金渐成:\n")
+    question = ' '.join(args.question)
+    print(f'\n❓ {question}\n')
+    answer = ask_jinjiancheng(question, as_of=args.as_of)
+    print('金渐成历史观点分析：\n')
     print(answer)
-    print("\n" + "="*60)
 
 
 if __name__ == "__main__":
