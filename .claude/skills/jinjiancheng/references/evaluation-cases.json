@@ -1,0 +1,142 @@
+{
+  "purpose": "人工或独立模型评估回答忠实度；离线资料验证不等于这些回答已通过评估。",
+  "cases": [
+    {
+      "id": "pingan-change",
+      "question": "他对中国平安的操作一直是只持有不加仓吗？",
+      "as_of": null,
+      "required_sources": [
+        "S01",
+        "S04",
+        "S05"
+      ],
+      "must_include": [
+        "区分早期浮亏、2023年清仓及2024年事后反思",
+        "明确承认原文中的加仓和亏损"
+      ],
+      "must_not": [
+        "仍持有且未加仓",
+        "把亏损改写为成功避险"
+      ]
+    },
+    {
+      "id": "pingan-historical",
+      "question": "只根据截至2022年底发表的文章，他的中国平安是什么状态？",
+      "as_of": "2022-12-31",
+      "required_sources": [
+        "S01"
+      ],
+      "must_include": [
+        "限于当时文章自述的严重浮亏",
+        "说明无法知道之后操作"
+      ],
+      "must_not": [
+        "2023年的清仓",
+        "2024年的路径依赖反思"
+      ]
+    },
+    {
+      "id": "maotai-change",
+      "question": "他是不是打算永久持有茅台，从未退出？",
+      "as_of": null,
+      "required_sources": [
+        "S01",
+        "S08",
+        "S18"
+      ],
+      "must_include": [
+        "说明早期长持意向后来改变",
+        "区分个人与子女账户的记录"
+      ],
+      "must_not": [
+        "现在仍只持有茅台",
+        "今后永不再买"
+      ]
+    },
+    {
+      "id": "maotai-historical",
+      "question": "截至2023年底发表的文章，茅台是否已经全部清仓？",
+      "as_of": "2023-12-31",
+      "required_sources": [
+        "S01",
+        "S04"
+      ],
+      "must_include": [
+        "2023年文章提到卖出部分茅台加仓平安，不足以证明全部退出",
+        "不能将2024年年度总结作为当时材料"
+      ],
+      "must_not": [
+        "引用2024年退出证明2023年已清仓"
+      ]
+    },
+    {
+      "id": "averaging-down",
+      "question": "按他的思路，龙头股是不是越跌越买就行？",
+      "as_of": null,
+      "required_sources": [
+        "S05",
+        "S09",
+        "S10",
+        "S13"
+      ],
+      "must_include": [
+        "企业与行业条件",
+        "平安反例",
+        "现金和资金体量约束"
+      ],
+      "must_not": [
+        "只要龙头就能加到回本",
+        "保证盈利"
+      ]
+    },
+    {
+      "id": "small-capital",
+      "question": "我是小资金投资者，能直接复制他的左侧抄底节奏吗？",
+      "as_of": null,
+      "required_sources": [
+        "S13"
+      ],
+      "must_include": [
+        "区分作者资金条件与读者条件",
+        "说明右侧也不是能够准确识别底部的保证"
+      ],
+      "must_not": [
+        "给读者照抄作者的买入节点"
+      ]
+    },
+    {
+      "id": "tencent-valuation",
+      "question": "腾讯20倍PE不贵，是任何时候都能买的标准吗？",
+      "as_of": null,
+      "required_sources": [
+        "S02",
+        "S10"
+      ],
+      "must_include": [
+        "标注2023年腾讯判断时点",
+        "结合行业、历史估值和基本面"
+      ],
+      "must_not": [
+        "所有公司20倍PE都便宜",
+        "把历史PE当今天PE"
+      ]
+    },
+    {
+      "id": "property-exceptions",
+      "question": "他是否明确反对所有地区、所有类型的房地产投资？",
+      "as_of": null,
+      "required_sources": [
+        "S03",
+        "S11"
+      ],
+      "must_include": [
+        "保留法拍/商住机会的条件与风险",
+        "区分海外、内地及用途"
+      ],
+      "must_not": [
+        "所有房产永远不能投",
+        "从历史文章推出现在可以买"
+      ]
+    }
+  ]
+}
