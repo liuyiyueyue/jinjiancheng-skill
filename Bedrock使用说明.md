@@ -1,5 +1,7 @@
 # AWS Bedrock 版本使用说明
 
+> 此文保留早期服务配置示例。当前项目定位、模型 ID 环境变量、历史时点查询和内容质量要求以 [README](README.md) 为准；下面的旧模型、定价、区域及控制台步骤不代表当前可用性。
+
 ## 🎯 为什么选择 Bedrock？
 
 ### Bedrock vs 直接调用 Anthropic API

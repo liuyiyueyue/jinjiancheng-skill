@@ -20,62 +20,63 @@
 - [观点与操作时间线](.claude/skills/jinjiancheng/references/view-timeline.md)
 - [18篇核心文章来源索引](.claude/skills/jinjiancheng/references/source-index.md)
 
-## 🚀 快速开始
+## 在 Claude Code 中使用
 
-### 选项1：在Claude Code中使用（最简单）⭐⭐⭐
+在此项目中打开 Claude Code，调用项目内的 skill：
 
-**如果你已经在用Claude Code，这是最简单的方式！**
-
-```
-直接在对话中问我：
-"我想投资英伟达，现在合适吗？"
-"腾讯500港元还能买吗？"
-"什么是做T？怎么操作？"
-"现在买房合适吗？"
-
-Claude会自动读取知识库，扮演金渐成回答你！
+```text
+/jinjiancheng 他对中国平安的操作如何变化？失败后反思了什么？
+/jinjiancheng-cn-stock 他是否始终持有茅台？请按文章日期说明。
+/jinjiancheng-us-stock 小资金能照搬他的左侧加仓方法吗？
+/jinjiancheng-real-estate 他是否反对所有地区、所有类型的房产投资？
 ```
 
-**优点**：
-- ✅ 无需配置AWS credentials
-- ✅ 对话式交互，更自然
-- ✅ 可以连续追问
-- ✅ 自动引用相关文章
+四个入口位于 `.claude/skills/<名称>/SKILL.md`，专项入口引用同一份回答原则、原文索引和时间线。请保留完整项目，单独复制一个 `SKILL.md` 不会同时带上所需的资料。
 
----
+问历史时点时明确“只使用截至某日已经发表的文章”；问今天的市场时，历史文章只能提供思考框架，实时价格与财务信息需要另行核实。
 
-### 选项2：命令行 - Anthropic API
+## 先查本地原文
+
+检索用到 `jieba`；按编号读取精选原文只需 Python 标准库。下面的命令不调用模型 API：
 
 ```bash
-# 1. 安装依赖
-pip3 install anthropic jieba
+python3 -m pip install jieba
 
-# 2. 设置API Key
-export ANTHROPIC_API_KEY='sk-ant-api03-...'
-
-# 3. 开始提问
-python3 jinjiancheng_ai.py "我有100万想买房投资，你怎么看？"
+python3 jinjiancheng_grounding.py "中国平安"
+python3 jinjiancheng_grounding.py "茅台" --as-of 2023-12-31
+python3 jinjiancheng_grounding.py --source S04 --full
 ```
 
----
+检索输出包含全文及相关核对摘录，不再固定只取文章前1500字。核对摘录会补充观点变化和失败案例；它们不代表主题全部材料，关键词命中也不意味着能够支持任何结论。
 
-### 选项3：命令行 - AWS Bedrock
+## 命令行生成回答
+
+两个入口共用回答原则、原文和核对摘录，支持 `--as-of YYYY-MM-DD`。实际生成会将问题与选中的文章材料发送给对应服务。
+
+### Anthropic API
 
 ```bash
-# 1. 安装依赖
-pip3 install boto3 jieba
+python3 -m pip install anthropic jieba
+export ANTHROPIC_API_KEY='你的 API key'
+export ANTHROPIC_MODEL='你账号可用的模型 ID'
 
-# 2. 配置AWS
-aws configure
-
-# 3. 启用Bedrock模型访问（在AWS Console）
-# Bedrock → Model access → 启用 Claude 3.5 Sonnet
-
-# 4. 开始提问
-python3 jinjiancheng_bedrock.py "我有100万想买房投资，你怎么看？"
+python3 jinjiancheng_ai.py "龙头股是否越跌越买就行？"
+python3 jinjiancheng_ai.py "茅台是否已经清仓？" --as-of 2023-12-31
 ```
 
----
+### AWS Bedrock
+
+```bash
+python3 -m pip install boto3 jieba
+# 使用已配置的 AWS profile、环境变量或运行环境的角色凭证
+export AWS_REGION='us-east-1'
+export BEDROCK_MODEL_ID='你账号和区域可用的模型或推理配置 ID'
+
+python3 jinjiancheng_bedrock.py "他的固定底仓比例是多少？"
+python3 jinjiancheng_bedrock.py "中国平安是什么持仓状态？" --as-of 2022-12-31
+```
+
+显式设置模型 ID；脚本保留的历史默认值不是当前可用性的保证。费用取决于所选模型与实际输入输出，本文不承诺固定单次价格。旧版 [Bedrock说明](Bedrock使用说明.md) 中的模型、定价、区域和控制台示例需要按服务方当前文档核对。
 
 ## 回答示例
 
@@ -100,49 +101,38 @@ python3 jinjiancheng_bedrock.py "我有100万想买房投资，你怎么看？"
 - 交易、收益、行情和预测是作者当时的自述；本项目没有独立核验他的投资业绩或预测命中率。
 - 本项目不能从历史资料判断作者在知识库截止日期之后的真实持仓，也不能提供实时行情。
 
-## ⚠️ 注意事项
+## 验证内容质量
 
-### 1. 这不是真人
-虽然AI能模仿金渐成的风格，但：
-- ❌ 不能替代独立思考
-- ❌ 不构成投资建议
-- ❌ 仅供参考学习
+离线验证：
 
-### 2. 知识时效性
-- 知识库截止到2026年4月
-- 对更新的市场情况可能不适用
-- 使用时注意时效性
-
-### 3. API安全
 ```bash
-# ✅ 正确做法：使用环境变量
-export ANTHROPIC_API_KEY='your-key'
-
-# ❌ 错误做法：写在代码里
-ANTHROPIC_API_KEY = 'your-key'  # 不要这样做！
+python3 -m pip install jieba
+python3 -m unittest discover -s tests -v
 ```
 
----
+验证包含原文摘录与元数据一致性、日期过滤、关键段落保留，以及两个模型入口传入的材料和规则。服务调用使用模拟对象，不产生 API 费用。
 
-## 🎓 使用建议
+[16个内容评估问题](.claude/skills/jinjiancheng/references/evaluation-cases.json) 用于进一步评估真实回答，包括历史时点、错误前提、资金适配和信息不足等情况。方法见 [内容评估](.claude/skills/jinjiancheng/references/evaluation.md)。离线测试通过不等于这些生成回答已通过评估，也不意味着投资方法已被验证。
 
-### 适合问的问题
-✅ "XX股票值得投资吗？"
-✅ "现在适合买房吗？"
-✅ "如何控制投资风险？"
-✅ "我是新手，该怎么开始投资？"
+## 项目结构
 
-### 不适合问的问题
-❌ "帮我写代码"（超出知识范围）
-❌ "今天天气怎么样"（无关话题）
-❌ "明天买什么会涨"（金渐成不做短期预测）
+```text
+.claude/skills/
+  jinjiancheng/SKILL.md
+  jinjiancheng/references/        # 共用原则、时间线、来源与评估
+  jinjiancheng-cn-stock/SKILL.md
+  jinjiancheng-us-stock/SKILL.md
+  jinjiancheng-real-estate/SKILL.md
+jinjiancheng_grounding.py        # 本地资料与两个入口共用的内容逻辑
+jinjiancheng_ai.py               # Anthropic API 入口
+jinjiancheng_bedrock.py          # Bedrock 入口
+jinjiancheng_knowledge_base.json # 原始知识库
+金渐成-历史文章-离线版/           # 原始归档
+tests/                         # 离线内容与请求验证
+```
 
----
+## 使用范围
 
-## 📝 License
+仅供个人学习使用，请勿用于商业目的。原始内容版权归金渐成公众号所有。
 
-仅供个人学习使用，请勿用于商业目的。
-
-原始内容版权归金渐成公众号所有。
-
----
+生成内容是基于历史文章的分析，不构成作者当前的投资建议。个人决策仍需结合自身处境和经过核实的当前信息。
