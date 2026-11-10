@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jin Jiancheng: US and Hong Kong Stocks"
+  short_description: "Analyze US and Hong Kong stock methods and limits"
+  default_prompt: "Use $jinjiancheng-us-stock to explain the capital constraints of his averaging-down method using original articles."

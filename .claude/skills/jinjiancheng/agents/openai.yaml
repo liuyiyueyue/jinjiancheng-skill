@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jin Jiancheng"
+  short_description: "Trace investment views to dated source articles"
+  default_prompt: "Use $jinjiancheng to explain how his investment views changed, citing article titles and dates."

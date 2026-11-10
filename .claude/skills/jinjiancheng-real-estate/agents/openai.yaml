@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jin Jiancheng: Real Estate"
+  short_description: "Trace property views by region, purpose, and date"
+  default_prompt: "Use $jinjiancheng-real-estate to explain how his property views differ by region and purpose, citing dated articles."

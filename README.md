@@ -2,7 +2,7 @@
 
 基于金渐成公众号历史文章的分析 skill，帮助理解他的判断依据、操作条件、失败反思与观点变化。回答可以保留直接、具体的表达方式，但会区分作者原话、内容归纳与对新问题的推演。
 
-项目提供四个 skill，以及 Anthropic API 和 AWS Bedrock 两个命令行入口。这是文章检索与提示词方案，没有训练专属模型，不代表作者本人或其当前表态。
+项目提供可在 Codex 和 Claude Code 中使用的四个 skill，以及 Anthropic API 和 AWS Bedrock 两个命令行入口。这是文章检索与提示词方案，没有训练专属模型，不代表作者本人或其当前表态。
 
 ## 内容如何组织
 
@@ -19,6 +19,32 @@
 - [从文章整理的思考框架](.claude/skills/jinjiancheng/references/thinking-framework.md)
 - [观点与操作时间线](.claude/skills/jinjiancheng/references/view-timeline.md)
 - [18篇核心文章来源索引](.claude/skills/jinjiancheng/references/source-index.md)
+
+## Use with Codex
+
+Open the full repository as your Codex project. If you use Codex CLI, start it from the repository root:
+
+```bash
+cd /path/to/jinjiancheng-skill
+codex
+```
+
+In the Codex prompt (not your shell), invoke a skill with `$`:
+
+```text
+$jinjiancheng Explain how his views on Ping An changed, citing article dates.
+$jinjiancheng-cn-stock Did he always hold Moutai? Separate plans from later sales.
+$jinjiancheng-us-stock Can someone with little capital copy his averaging-down method?
+$jinjiancheng-real-estate Did he reject property investment in every region?
+```
+
+You can ask in English or Chinese. For a historical cutoff, add “Use only articles published on or before 2023-12-31.”
+
+Codex discovers the four project skills through `.agents/skills/`. Each entry is a relative symlink to the matching `.claude/skills/` folder, so both clients use the same instructions and evidence. Keep the complete checkout, including the knowledge base and reference files; copying a single skill folder is insufficient. The checkout must preserve symlinks (on Windows, use WSL or a Git setup that supports them).
+
+In Codex CLI, use `/skills` to check discovery. If the skills do not appear after opening this project, restart Codex. See the [official skill documentation](https://learn.chatgpt.com/docs/build-skills).
+
+The skill uses your existing Codex session to answer. Its local source reader needs Python 3; keyword search also needs `jieba` (see below). No Anthropic or AWS credentials are needed for this workflow. The Python retrieval command itself makes no model API calls; the materials Codex reads become part of its model context.
 
 ## 在 Claude Code 中使用
 
@@ -117,9 +143,11 @@ python3 -m unittest discover -s tests -v
 ## 项目结构
 
 ```text
+.agents/skills/                 # Codex: links to the four .claude/skills folders
 .claude/skills/
   jinjiancheng/SKILL.md
   jinjiancheng/references/        # 共用原则、时间线、来源与评估
+  jinjiancheng/agents/openai.yaml # Codex display metadata; each skill has one
   jinjiancheng-cn-stock/SKILL.md
   jinjiancheng-us-stock/SKILL.md
   jinjiancheng-real-estate/SKILL.md
