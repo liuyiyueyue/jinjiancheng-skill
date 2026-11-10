@@ -20,31 +20,31 @@
 - [观点与操作时间线](.claude/skills/jinjiancheng/references/view-timeline.md)
 - [18篇核心文章来源索引](.claude/skills/jinjiancheng/references/source-index.md)
 
-## Use with Codex
+## 在 Codex 中使用
 
-Open the full repository as your Codex project. If you use Codex CLI, start it from the repository root:
+将整个仓库作为 Codex 项目打开。如果使用 Codex CLI，请在仓库根目录启动：
 
 ```bash
 cd /path/to/jinjiancheng-skill
 codex
 ```
 
-In the Codex prompt (not your shell), invoke a skill with `$`:
+在 Codex 对话框中（不是终端里）用 `$` 调用 skill：
 
 ```text
-$jinjiancheng Explain how his views on Ping An changed, citing article dates.
-$jinjiancheng-cn-stock Did he always hold Moutai? Separate plans from later sales.
-$jinjiancheng-us-stock Can someone with little capital copy his averaging-down method?
-$jinjiancheng-real-estate Did he reject property investment in every region?
+$jinjiancheng 请按文章日期说明他对中国平安的看法如何变化。
+$jinjiancheng-cn-stock 他是否始终持有茅台？请区分持有计划和后续卖出。
+$jinjiancheng-us-stock 资金较少的人可以照搬他的分批加仓方法吗？
+$jinjiancheng-real-estate 他是否反对在所有地区投资所有类型的房产？
 ```
 
-You can ask in English or Chinese. For a historical cutoff, add “Use only articles published on or before 2023-12-31.”
+提问时可以指定历史时点，例如：“只使用截至2023年12月31日已经发表的文章。”
 
-Codex discovers the four project skills through `.agents/skills/`. Each entry is a relative symlink to the matching `.claude/skills/` folder, so both clients use the same instructions and evidence. Keep the complete checkout, including the knowledge base and reference files; copying a single skill folder is insufficient. The checkout must preserve symlinks (on Windows, use WSL or a Git setup that supports them).
+Codex 通过 `.agents/skills/` 发现这四个项目 skill。每个入口都是指向对应 `.claude/skills/` 目录的相对符号链接，因此两个客户端共用同一套指令和资料。请保留完整仓库，包括知识库和参考文件；只复制单个 skill 目录并不够。检出仓库时需要保留符号链接（Windows 用户可使用 WSL 或支持符号链接的 Git 环境）。
 
-In Codex CLI, use `/skills` to check discovery. If the skills do not appear after opening this project, restart Codex. See the [official skill documentation](https://learn.chatgpt.com/docs/build-skills).
+在 Codex CLI 中输入 `/skills` 检查是否已发现这些 skill。打开项目后若未显示，请重启 Codex。详情见[官方 skill 文档](https://learn.chatgpt.com/docs/build-skills)。
 
-The skill uses your existing Codex session to answer. Its local source reader needs Python 3; keyword search also needs `jieba` (see below). No Anthropic or AWS credentials are needed for this workflow. The Python retrieval command itself makes no model API calls; the materials Codex reads become part of its model context.
+回答由当前 Codex 会话生成。项目的本地原文读取工具需要 Python 3；关键词检索还需要安装 `jieba`（见下文）。此用法不需要 Anthropic 或 AWS 凭证。本地检索命令本身不会调用模型 API；Codex 会将读取到的材料作为回答上下文。
 
 ## 在 Claude Code 中使用
 

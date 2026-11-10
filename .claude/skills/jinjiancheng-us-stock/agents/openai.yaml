@@ -1,4 +1,4 @@
 interface:
-  display_name: "Jin Jiancheng: US and Hong Kong Stocks"
-  short_description: "Analyze US and Hong Kong stock methods and limits"
-  default_prompt: "Use $jinjiancheng-us-stock to explain the capital constraints of his averaging-down method using original articles."
+  display_name: "金渐成：美股与港股"
+  short_description: "分析美股、港股方法及适用边界"
+  default_prompt: "使用 $jinjiancheng-us-stock，结合原文说明他的分批加仓方法受哪些资金条件限制。"

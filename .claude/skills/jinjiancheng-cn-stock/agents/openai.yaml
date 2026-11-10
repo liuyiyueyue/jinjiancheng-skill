@@ -1,4 +1,4 @@
 interface:
-  display_name: "Jin Jiancheng: China Stocks"
-  short_description: "Study Chinese stock decisions and lessons from losses"
-  default_prompt: "Use $jinjiancheng-cn-stock to trace his Moutai holding plans and later sales, citing dated articles."
+  display_name: "金渐成：A股"
+  short_description: "分析A股操作与亏损后的反思"
+  default_prompt: "使用 $jinjiancheng-cn-stock，结合有日期的文章，追溯他对茅台的持有计划和后续卖出。"

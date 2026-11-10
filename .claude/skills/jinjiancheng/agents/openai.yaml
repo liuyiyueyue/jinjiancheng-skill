@@ -1,4 +1,4 @@
 interface:
-  display_name: "Jin Jiancheng"
-  short_description: "Trace investment views to dated source articles"
-  default_prompt: "Use $jinjiancheng to explain how his investment views changed, citing article titles and dates."
+  display_name: "金渐成投资思路"
+  short_description: "依据有日期的原文追溯投资观点"
+  default_prompt: "使用 $jinjiancheng，结合文章标题和日期，说明他的投资观点如何变化。"
