@@ -1,4 +1,4 @@
 interface:
-  display_name: "金渐成投资思路"
-  short_description: "依据有日期的原文追溯投资观点"
-  default_prompt: "使用 $jinjiancheng，结合文章标题和日期，说明他的投资观点如何变化。"
+  display_name: "金渐成投资与成长"
+  short_description: "依据有日期的原文追溯投资、家庭教育与成长观点，保留适用条件"
+  default_prompt: "使用 $jinjiancheng，结合文章标题和日期，解释他的投资或家庭教育方法及其适用条件。"
