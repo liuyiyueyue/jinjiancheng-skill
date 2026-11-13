@@ -1,0 +1,573 @@
+{
+  "retrieved_at": "2026-11-13T05:35:32.587166+00:00",
+  "cutoff_exclusive": "2026-09-29",
+  "requested_through": "2026-11-13",
+  "account": "金渐成",
+  "baseline_commit": "ba0c55a9c6df1e8ff7017f1e5c3f4f1352a4ac96",
+  "album_url": "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzYzOTU1NTUzNw%3D%3D&action=getalbum&album_id=4319967935826853894",
+  "album_title": "历史文章",
+  "album_total_count": 424,
+  "entries": [
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485343:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485343&idx=1&sn=01faed2b4710fb78c10587d3ccfc1b1c&chksm=f0d18521c7a60c3733a9f0241ae33a3d5749fd97b4209438e8b55bb7ebcfc28471fae45703a2",
+      "msgid": "2247485343",
+      "itemidx": "1",
+      "title": "事与愿违~",
+      "account": "金渐成",
+      "published_at": "2026-10-02T00:23:14+08:00",
+      "publish_time": "2026-10-02",
+      "publish_timestamp": 1790871794,
+      "album_create_timestamp": 1790871755,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-02 事与愿违~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-02 事与愿违~/article.txt",
+      "content_length": 2112,
+      "content_sha256": "bfc00c29fed57fd5766c66bbf3502cef4d1541ccde54a16b54c49248341d9845",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "edf21a044cc1c91fd92a2d58b6a074bbc38e387ec07cd787996e7b1fa7b6aa10"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485348:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485348&idx=1&sn=c33d94be18691693a0c4c2b7ab2aa953&chksm=f0d1851ac7a60c0c66d5c5e12e88155ef565cb10a8ac112041fb256922b765a13316fd49cbbc",
+      "msgid": "2247485348",
+      "itemidx": "1",
+      "title": "失而复得~",
+      "account": "金渐成",
+      "published_at": "2026-10-03T20:09:01+08:00",
+      "publish_time": "2026-10-03",
+      "publish_timestamp": 1791029341,
+      "album_create_timestamp": 1791029298,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-03 失而复得~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-03 失而复得~/article.txt",
+      "content_length": 1757,
+      "content_sha256": "1abc8fb1827e3708a0131b5033e244c6e9812184d340328114e6f86db9536314",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [
+        "https://mmbiz.qpic.cn/sz_mmbiz_jpg/WWBzFmnUicXD0N330B03wAGOs9Ph30qJWbKDtWTiadCsUMdCyGTncVrBzJicHwmNtkibhTK8qtc3iat28bBawSLt0XTibgyB7I974xiaUVOiaGica2PA/640?wx_fmt=jpeg"
+      ],
+      "assets": [
+        {
+          "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/WWBzFmnUicXD0N330B03wAGOs9Ph30qJWbKDtWTiadCsUMdCyGTncVrBzJicHwmNtkibhTK8qtc3iat28bBawSLt0XTibgyB7I974xiaUVOiaGica2PA/640?wx_fmt=jpeg",
+          "file_path": "金渐成-历史文章-离线版/2026-10-03 失而复得~/image-01.jpg",
+          "sha256": "ba1f79597a88459ab3bdd7dfe49604c616a9f53f5c6c79501fe5f2912af9580c",
+          "bytes": 392176
+        }
+      ],
+      "html_sha256": "21bfb73fd24c6b37faf7d6c4664f64f8d8a0176cb4f3bf8caf229d8216bc7588"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485353:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485353&idx=1&sn=39cc03c064c4cb1405354ff561405396&chksm=f0d18517c7a60c01cf5e93f906cd195555b4292511d2105300557c299f0391c2a784ad12f6e6",
+      "msgid": "2247485353",
+      "itemidx": "1",
+      "title": "肥而不溺~",
+      "account": "金渐成",
+      "published_at": "2026-10-05T17:21:12+08:00",
+      "publish_time": "2026-10-05",
+      "publish_timestamp": 1791192072,
+      "album_create_timestamp": 1791192027,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-05 肥而不溺~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-05 肥而不溺~/article.txt",
+      "content_length": 2180,
+      "content_sha256": "464cbba945a1bb32f0bcc6717eb07f1602ccb52266b391b161997fe36536e15a",
+      "albums": {
+        "4319751365741608965": "投资心得"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "700777566e3a9c906052b0a3fa9f96a0321f04ee1aadb88aadf1221783afa95d"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485360:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485360&idx=1&sn=08203889ec24f337e641301b858d0da9&chksm=f0d1850ec7a60c18fb01f45b2cf5bcd33871dcbd9e209a4d19eeb9243c66ee05a9d8d359bd94",
+      "msgid": "2247485360",
+      "itemidx": "1",
+      "title": "没有风雨躲得过~",
+      "account": "金渐成",
+      "published_at": "2026-10-08T18:58:39+08:00",
+      "publish_time": "2026-10-08",
+      "publish_timestamp": 1791457119,
+      "album_create_timestamp": 1791457072,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-08 没有风雨躲得过~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-08 没有风雨躲得过~/article.txt",
+      "content_length": 2094,
+      "content_sha256": "79f591f595b2f98db434b001b1fe99f64dcaf9be6cafdbfb8bb1228be0609a71",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "045cd0a69dfcc6c22b4f38b9624503ce4237583fc8070e4fff416b5a06f59c26"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485366:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485366&idx=1&sn=0480d892fa365a024f06fa0d9fc547a7&chksm=f0d18508c7a60c1e81130878ec27bb4f8e556b8792859699eabb5a934ef1647c2bc7e1d79d49",
+      "msgid": "2247485366",
+      "itemidx": "1",
+      "title": "永远不要买垃圾~",
+      "account": "金渐成",
+      "published_at": "2026-10-13T13:53:59+08:00",
+      "publish_time": "2026-10-13",
+      "publish_timestamp": 1791870839,
+      "album_create_timestamp": 1791870774,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-13 永远不要买垃圾~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-13 永远不要买垃圾~/article.txt",
+      "content_length": 2390,
+      "content_sha256": "eb1f104ae84f2c24b1ee082df0dabdaa8de51086b6558e61794a05e7941451f0",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "da9bebde9ec6d3c86c427c2f6bdb94f86f3a13e0138a07a3a45b85b51e953ba3"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485371:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485371&idx=1&sn=e6438e2557b2a172a1a92c2cf578cb72&chksm=f0d18505c7a60c135fde7a6463fd039c79333aaa9a9b2be51ca26a0fd505ac3074007bf0fc1a",
+      "msgid": "2247485371",
+      "itemidx": "1",
+      "title": "在人潮中~",
+      "account": "金渐成",
+      "published_at": "2026-10-15T09:29:51+08:00",
+      "publish_time": "2026-10-15",
+      "publish_timestamp": 1792027791,
+      "album_create_timestamp": 1792027699,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-15 在人潮中~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-15 在人潮中~/article.txt",
+      "content_length": 2244,
+      "content_sha256": "cc5c75f388eeb0fb866e03ae67153cc425b22b06820066af6ec2f90b16db25d6",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "0fc547be2036150ddaecfc57775c47c5b951bb6937ed03a5961db5460f68da95"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485375:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485375&idx=1&sn=7b9592c482f7f4b9734aa2a1bf3d013f&chksm=f0d18501c7a60c173c47c2191386db04077b13998df1589b194119d3c2204afc5062c8c89642",
+      "msgid": "2247485375",
+      "itemidx": "1",
+      "title": "贵人不可贱用~",
+      "account": "金渐成",
+      "published_at": "2026-10-16T11:13:03+08:00",
+      "publish_time": "2026-10-16",
+      "publish_timestamp": 1792120383,
+      "album_create_timestamp": 1792120315,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-16 贵人不可贱用~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-16 贵人不可贱用~/article.txt",
+      "content_length": 2200,
+      "content_sha256": "f8572954f301a8412e57890e70e582d1dea7349e9dc2f765eb091b5d07463e5b",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "b83fbfed68bd5ce3bf9333787fde1d396d4f2d043db14c162455f2cfb6e860ed"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485382:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485382&idx=1&sn=045232748431fa0824ca6257b8c71205&chksm=f0d18578c7a60c6e7fb59eee6d5dcd9998929157b927609674cea9c4237a7a3e48a4f0c4ee4b",
+      "msgid": "2247485382",
+      "itemidx": "1",
+      "title": "一生只需富一次~",
+      "account": "金渐成",
+      "published_at": "2026-10-19T10:35:55+08:00",
+      "publish_time": "2026-10-19",
+      "publish_timestamp": 1792377355,
+      "album_create_timestamp": 1792377297,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-19 一生只需富一次~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-19 一生只需富一次~/article.txt",
+      "content_length": 2269,
+      "content_sha256": "0b065f3283e7b96039ce1bf224e503777e2476e9f45ee3c12768322f48cd4ce5",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "cb3548348fa6cfd07ead32e1f4bb3e470c87dac78fd78ee9db02f1d960bb52cf"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485386:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485386&idx=1&sn=2b59326e90a73fae7e542c3c352f3ae6&chksm=f0d18574c7a60c62c6b04229bf41ae1391751727211fc44e02d28d5e77248c561a935a7ee139",
+      "msgid": "2247485386",
+      "itemidx": "1",
+      "title": "新的策略~",
+      "account": "金渐成",
+      "published_at": "2026-10-22T23:15:00+08:00",
+      "publish_time": "2026-10-22",
+      "publish_timestamp": 1792682100,
+      "album_create_timestamp": 1792681900,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-22 新的策略~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-22 新的策略~/article.txt",
+      "content_length": 1684,
+      "content_sha256": "2c3dcc85ca7a980dd9f8889fa81ecadfc3d994ddc28ad949fadf1eeeea48943d",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "c95d2bfe382ec9df67ed19df640e8049331ecff11a3409710385ff89c71084a5"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485393:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485393&idx=1&sn=fa735238f9450833b0e966286ad46ce0&chksm=f0d1856fc7a60c795fb590490725f8d5fa88b91affc5e595d85ac4d1ed32cba77917f38e1b1e",
+      "msgid": "2247485393",
+      "itemidx": "1",
+      "title": "时代可真是个渣男~",
+      "account": "金渐成",
+      "published_at": "2026-10-26T08:34:23+08:00",
+      "publish_time": "2026-10-26",
+      "publish_timestamp": 1792974863,
+      "album_create_timestamp": 1792974782,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-26 时代可真是个渣男~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-26 时代可真是个渣男~/article.txt",
+      "content_length": 2284,
+      "content_sha256": "954583b8b026677088257882410ee82545ecbfa24329cc66e4f4e5b265ca17cc",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "5cb71068cb5705b8865c5d12be7f0b6ab75b9b8d463de070c2a547a6e84091b8"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485398:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485398&idx=1&sn=4e97a3b8638fd19694e130276ec3fbc6&chksm=f0d18568c7a60c7ee9ac5ae01b1ba06ae0df1380b0b42d50e8136c23753473af85d0298a10c5",
+      "msgid": "2247485398",
+      "itemidx": "1",
+      "title": "作个闲人~",
+      "account": "金渐成",
+      "published_at": "2026-10-27T12:39:02+08:00",
+      "publish_time": "2026-10-27",
+      "publish_timestamp": 1793075942,
+      "album_create_timestamp": 1793075850,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-27 作个闲人~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-27 作个闲人~/article.txt",
+      "content_length": 1742,
+      "content_sha256": "758456e1b5a1954e08414c50c2b95e6841385afc79d7e5190c25ee735e610247",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "e2f89560c19849ba31d34b8eada9a6b40f4f5773a3fb9400fe1895e0a8ab14b5"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485402:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485402&idx=1&sn=f4f75e807d0e01e1158645ebecb28e49&chksm=f0d18564c7a60c72963ebf13a24cbb718686725c29380801ee1eb904cc2ccabfb4639ab111f8",
+      "msgid": "2247485402",
+      "itemidx": "1",
+      "title": "似曾相识~",
+      "account": "金渐成",
+      "published_at": "2026-10-29T09:46:35+08:00",
+      "publish_time": "2026-10-29",
+      "publish_timestamp": 1793238395,
+      "album_create_timestamp": 1793238306,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-29 似曾相识~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-29 似曾相识~/article.txt",
+      "content_length": 2004,
+      "content_sha256": "12d85b1d85fecdf29d0c7090c0a80985faa880ba6c34cdce116ae4d79a8fb327",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [
+        "https://mp.weixin.qq.com/s?__biz=MzY0MDI5Mzc0NA%3D%3D&mid=2247484311&idx=1&sn=3193497afd989626600e26fc0c3982b6"
+      ],
+      "image_urls": [],
+      "html_sha256": "d8452f43f498505315465657ced1d11a023c79379ebedbfc6b76352aec71d976"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485408:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485408&idx=1&sn=4e5b9be856078fcb1ac29b9d09bfcea2&chksm=f0d1855ec7a60c4863d89f38bb37ee093e50ac93701e7fccde70c4576a339639efeb7ddc934b",
+      "msgid": "2247485408",
+      "itemidx": "1",
+      "title": "竟然梅开二度~",
+      "account": "金渐成",
+      "published_at": "2026-10-30T09:27:07+08:00",
+      "publish_time": "2026-10-30",
+      "publish_timestamp": 1793323627,
+      "album_create_timestamp": 1793323537,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-10-30 竟然梅开二度~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-10-30 竟然梅开二度~/article.txt",
+      "content_length": 2466,
+      "content_sha256": "94cf71fee557a37d7c3fb6b6eb78d72c0cb42c581a00887fe22b5b1f6e010fbd",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "0cf1462cdf672bb81ef134108b2eb55b21875dac0428da8c3889dc9f1b83c31a"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485428:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485428&idx=1&sn=4b2e0731b821978ada3f4a5a7e81ff3b&chksm=f0d1854ac7a60c5c39407338347bd1bab88825878246283b1887d4af4c1ec8903eeb142ae8f8",
+      "msgid": "2247485428",
+      "itemidx": "1",
+      "title": "等风雨来~",
+      "account": "金渐成",
+      "published_at": "2026-11-02T08:56:20+08:00",
+      "publish_time": "2026-11-02",
+      "publish_timestamp": 1793580980,
+      "album_create_timestamp": 1793580884,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-02 等风雨来~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-02 等风雨来~/article.txt",
+      "content_length": 2042,
+      "content_sha256": "ac9772829d245a918c1734b7eb364932a20c4b6e2420584cb5947eb9076a2d57",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "777ef02489d021bb37d81cafa5b39d21421418063c130fe338822a60adb1b177"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485432:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485432&idx=1&sn=49f24035d59ae15f6b3ec5eccc2edd54&chksm=f0d18546c7a60c506c8d9887815d34ee5725b944de70d1125165e058e531c05a2a35e6754719",
+      "msgid": "2247485432",
+      "itemidx": "1",
+      "title": "把自己安放妥当~",
+      "account": "金渐成",
+      "published_at": "2026-11-03T08:43:18+08:00",
+      "publish_time": "2026-11-03",
+      "publish_timestamp": 1793666598,
+      "album_create_timestamp": 1793666509,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-03 把自己安放妥当~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-03 把自己安放妥当~/article.txt",
+      "content_length": 2544,
+      "content_sha256": "d65f07dc5cf378a2603e531d7354625e547c0fed75b9629f5a4ed7182ec6731d",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "3365f61e110f24f43635257179eee3f4eb5ecf770396b6cadea66fddfb7d7e03"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485436:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485436&idx=1&sn=b50410f15812e64bf8df8b6f074e14de&chksm=f0d18542c7a60c5427b51e5a6a11777eb45ba3db42206e6e7bd656aa42dec38ddd05725cb2ce",
+      "msgid": "2247485436",
+      "itemidx": "1",
+      "title": "难得夫妻是少年~",
+      "account": "金渐成",
+      "published_at": "2026-11-05T10:28:08+08:00",
+      "publish_time": "2026-11-05",
+      "publish_timestamp": 1793845688,
+      "album_create_timestamp": 1793845578,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-05 难得夫妻是少年~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-05 难得夫妻是少年~/article.txt",
+      "content_length": 2147,
+      "content_sha256": "517b0519102e88d304dbf86d6a7b5b07bf7b98ce055643e1cff48666602cdf24",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "f0678b5e9ee6ebbe91b8b7bfe3525d92887d38c5e4e37f394e9a5a1a6401c8e0"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485440:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485440&idx=1&sn=ac509492b5b49035690fdea48acb2122&chksm=f0d18abec7a603a8c7932ccc787b9f057eda35c2d9817a2dd220824d36c10bbea1ea0e4897bb",
+      "msgid": "2247485440",
+      "itemidx": "1",
+      "title": "美股血流成河~",
+      "account": "金渐成",
+      "published_at": "2026-11-06T01:47:38+08:00",
+      "publish_time": "2026-11-06",
+      "publish_timestamp": 1793900858,
+      "album_create_timestamp": 1793900771,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-06 美股血流成河~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-06 美股血流成河~/article.txt",
+      "content_length": 1942,
+      "content_sha256": "416d519fd63673b1a4c319cb273c7d62fdcdd70d75e394c6c48b75c6539f437e",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "eea75de77b04419953c2fe088b9e62e5c1e5d33dcf14ce1fffa5a5865e998988"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485446:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485446&idx=1&sn=4b586713982e8ae763eb49a54edc2408&chksm=f0d18ab8c7a603aeb8673a5e73b88597eed24a4ff523877eb6b90cbfa746dcaa5c368b3d1226",
+      "msgid": "2247485446",
+      "itemidx": "1",
+      "title": "最漫长的一条路~",
+      "account": "金渐成",
+      "published_at": "2026-11-07T12:16:08+08:00",
+      "publish_time": "2026-11-07",
+      "publish_timestamp": 1794024968,
+      "album_create_timestamp": 1794024874,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-07 最漫长的一条路~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-07 最漫长的一条路~/article.txt",
+      "content_length": 2574,
+      "content_sha256": "32f44703bc216b453b85c88ff8ce35a4072a581a7c18f32f12ff4121c152c0c7",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "35f22979645446e07d844d7286fa92b4e7831d1b5a05d08f48b172b192ebc4b4"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485451:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485451&idx=1&sn=a1af80ec913cc2cf84ad7c4ae145dc3a&chksm=f0d18ab5c7a603a3516ad72659a0eadb7c337a51eaf0f31d8c8ca47f699e308dd94835b2a3eb",
+      "msgid": "2247485451",
+      "itemidx": "1",
+      "title": "不断让自己变得值钱~",
+      "account": "金渐成",
+      "published_at": "2026-11-09T10:59:33+08:00",
+      "publish_time": "2026-11-09",
+      "publish_timestamp": 1794193173,
+      "album_create_timestamp": 1794193080,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-09 不断让自己变得值钱~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-09 不断让自己变得值钱~/article.txt",
+      "content_length": 2660,
+      "content_sha256": "135953b13bfe72b02f27b04b683b048a6c61b69331df77c4ad580a005d30e9c8",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "0dca33f7e142c149dfb1b28fcdccf7eed2439a036c4f15a383632aa8d00a40d4"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485459:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485459&idx=1&sn=598fbb2fc657cf9989f5055e3856b40e&chksm=f0d18aadc7a603bb643a1e84552823e9f54fb170e866c29ae7624829df9c1a2228920dd036c3",
+      "msgid": "2247485459",
+      "itemidx": "1",
+      "title": "今年的麦子又熟了~",
+      "account": "金渐成",
+      "published_at": "2026-11-10T10:11:25+08:00",
+      "publish_time": "2026-11-10",
+      "publish_timestamp": 1794276685,
+      "album_create_timestamp": 1794276573,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-10 今年的麦子又熟了~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-10 今年的麦子又熟了~/article.txt",
+      "content_length": 2086,
+      "content_sha256": "944e2cf004a0e10171ddc42b964b69d25182fd772ace91d153f9e25fd6666d9f",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "4b89d130de8212423fbdb791866c98cf2f1621bfbbd0097275fe4e10e232c476"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485464:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485464&idx=1&sn=252f91c3901beaf549ff6b04117d10da&chksm=f0d18aa6c7a603b033487647f31f61e82a536960b908cdd93089bfb945e73413351129502c5f",
+      "msgid": "2247485464",
+      "itemidx": "1",
+      "title": "跌太狠了，真刺激~",
+      "account": "金渐成",
+      "published_at": "2026-11-12T18:53:14+08:00",
+      "publish_time": "2026-11-12",
+      "publish_timestamp": 1794480794,
+      "album_create_timestamp": 1794480686,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-12 跌太狠了，真刺激~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-12 跌太狠了，真刺激~/article.txt",
+      "content_length": 2189,
+      "content_sha256": "8690e086845d5571ce1d039f14f540697238519c5629966a7932a4cd1a16d842",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "60b8cea881cfe0b28b596bfa62725cea882f5c24013a4c0bd1d54a592012f88e"
+    },
+    {
+      "source_id": "MzYzOTU1NTUzNw==:2247485469:1",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485469&idx=1&sn=2aea9c0cce4533186096a637ca1e69e7&chksm=f0d18aa3c7a603b5d9b055c928751584ea6c9437789b3ab79b286c0e4d6d9366dc61b18f9e2c",
+      "msgid": "2247485469",
+      "itemidx": "1",
+      "title": "此刻心定~",
+      "account": "金渐成",
+      "published_at": "2026-11-13T08:40:46+08:00",
+      "publish_time": "2026-11-13",
+      "publish_timestamp": 1794530446,
+      "album_create_timestamp": 1794530353,
+      "status": "downloaded",
+      "file_path": "金渐成-历史文章-离线版/2026-11-13 此刻心定~/index.html",
+      "text_path": "金渐成-历史文章-离线版/2026-11-13 此刻心定~/article.txt",
+      "content_length": 2035,
+      "content_sha256": "36afa680d2fb0e3df8f5a46989446e329f01fe1b1923ac24f42929a02e0e4657",
+      "albums": {
+        "4319967935826853894": "历史文章"
+      },
+      "article_links": [],
+      "image_urls": [],
+      "html_sha256": "9368d6571e654865c62fb62ca577d431e76849633a866217e181b626b9d4fda3"
+    }
+  ],
+  "excluded_collections": [
+    {
+      "name": "美元资产",
+      "reason": "Excluded at user request"
+    }
+  ],
+  "collection_audit": [
+    {
+      "album_id": "4319967935826853894",
+      "title": "历史文章",
+      "source_url": "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzYzOTU1NTUzNw%3D%3D&action=getalbum&album_id=4319967935826853894",
+      "total_entries_scanned": 424,
+      "recent_entries_downloaded": 21,
+      "pagination_complete": true
+    },
+    {
+      "album_id": "4319751365741608965",
+      "title": "投资心得",
+      "source_url": "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzYzOTU1NTUzNw%3D%3D&action=getalbum&album_id=4319751365741608965",
+      "total_entries_scanned": 25,
+      "recent_entries_downloaded": 1,
+      "pagination_complete": true
+    },
+    {
+      "album_id": "4319745302002761742",
+      "title": "亲子生活",
+      "source_url": "https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzYzOTU1NTUzNw%3D%3D&action=getalbum&album_id=4319745302002761742",
+      "total_entries_scanned": 9,
+      "recent_entries_downloaded": 0,
+      "pagination_complete": true
+    }
+  ],
+  "added_count": 22,
+  "body_characters": 47645,
+  "validation": {
+    "body_hashes_verified": true,
+    "all_article_authors_and_publish_dates_verified": true,
+    "source_id_duplicates_in_existing_repository": 0,
+    "comparison_method": "Compare __biz + mid + idx in source URLs against repository HTML and JSON at baseline_commit; baseline archive directories end on 2026-09-29",
+    "comments_included": false,
+    "images_in_article_bodies": 1,
+    "session_credentials_included": false
+  }
+}

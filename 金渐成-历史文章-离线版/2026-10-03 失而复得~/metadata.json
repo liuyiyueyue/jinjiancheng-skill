@@ -1,0 +1,33 @@
+{
+  "source_id": "MzYzOTU1NTUzNw==:2247485348:1",
+  "source_url": "https://mp.weixin.qq.com/s?__biz=MzYzOTU1NTUzNw%3D%3D&mid=2247485348&idx=1&sn=c33d94be18691693a0c4c2b7ab2aa953&chksm=f0d1851ac7a60c0c66d5c5e12e88155ef565cb10a8ac112041fb256922b765a13316fd49cbbc",
+  "msgid": "2247485348",
+  "itemidx": "1",
+  "title": "失而复得~",
+  "account": "金渐成",
+  "published_at": "2026-10-03T20:09:01+08:00",
+  "publish_time": "2026-10-03",
+  "publish_timestamp": 1791029341,
+  "album_create_timestamp": 1791029298,
+  "status": "downloaded",
+  "file_path": "金渐成-历史文章-离线版/2026-10-03 失而复得~/index.html",
+  "text_path": "金渐成-历史文章-离线版/2026-10-03 失而复得~/article.txt",
+  "content_length": 1757,
+  "content_sha256": "1abc8fb1827e3708a0131b5033e244c6e9812184d340328114e6f86db9536314",
+  "albums": {
+    "4319967935826853894": "历史文章"
+  },
+  "article_links": [],
+  "image_urls": [
+    "https://mmbiz.qpic.cn/sz_mmbiz_jpg/WWBzFmnUicXD0N330B03wAGOs9Ph30qJWbKDtWTiadCsUMdCyGTncVrBzJicHwmNtkibhTK8qtc3iat28bBawSLt0XTibgyB7I974xiaUVOiaGica2PA/640?wx_fmt=jpeg"
+  ],
+  "assets": [
+    {
+      "source_url": "https://mmbiz.qpic.cn/sz_mmbiz_jpg/WWBzFmnUicXD0N330B03wAGOs9Ph30qJWbKDtWTiadCsUMdCyGTncVrBzJicHwmNtkibhTK8qtc3iat28bBawSLt0XTibgyB7I974xiaUVOiaGica2PA/640?wx_fmt=jpeg",
+      "file_path": "金渐成-历史文章-离线版/2026-10-03 失而复得~/image-01.jpg",
+      "sha256": "ba1f79597a88459ab3bdd7dfe49604c616a9f53f5c6c79501fe5f2912af9580c",
+      "bytes": 392176
+    }
+  ],
+  "html_sha256": "21bfb73fd24c6b37faf7d6c4664f64f8d8a0176cb4f3bf8caf229d8216bc7588"
+}
